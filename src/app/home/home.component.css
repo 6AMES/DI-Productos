@@ -1,0 +1,144 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    width: 50%;
+    margin: 0 1rem;
+    margin-top: 5rem;
+}
+
+.section-title > h1 {
+    font-size: 126px;
+    color: #272727;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bento-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E7E7DB;
+    border-radius: 8px;
+}
+
+.bento-box:hover > .bento-title > h3 {
+    text-decoration: underline;
+}
+
+#bento-box-1, #bento-box-5 {
+    grid-column: span 2; grid-row: span 4;
+}
+
+#bento-box-2, #bento-box-3 {
+    grid-column: span 1; grid-row: span 2;
+}
+
+#bento-box-4, #bento-box-6, #bento-box-7 {
+    grid-column: span 2; grid-row: span 2;
+}
+
+.bento-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: .5rem;
+    box-sizing: border-box;
+    font-size: 36px;
+}
+
+.bento-title > h3 {
+    color: #272727;
+}
+
+.bento-title > span {
+    color: #C9CABC;
+}
+
+.bento-img {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bento-img > img {
+    height: 100%;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.journal-box {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.journal-box:hover > .jour-title > h2 {
+    text-decoration: underline;
+}
+
+#journal-box-1 {
+    background-color: #E8572A;
+    color: #272727;
+}
+
+#journal-box-2 {
+    background-color: #272727;
+    color: #E7E7DB;
+}
+
+.date, .author {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.jour-title {
+    text-align: center;
+}
+
+.jour-title > h2 {
+    font-size: 82px;
+}
+
+.photo {
+    width: 40%;
+}
+
+.photo-paper {
+    display: flex;
+    background-color: #E7E7DB;
+    padding: 1rem 1rem 5rem 1rem;
+    margin: 2rem 0;
+}
+
+.photo-paper > img {
+    width: 100%;
+}
