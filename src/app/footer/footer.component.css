@@ -1,0 +1,44 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+#news-sales {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+#special {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+button {
+    cursor: pointer;
+    color: #E7E7DB;
+    background-color: #E8572A;
+    border: none;
+    border-radius: 100%;
+    padding: 1rem 4rem;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+}

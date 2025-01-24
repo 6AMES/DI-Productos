@@ -1,0 +1,35 @@
+header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#menu-1 {
+    width: 70%;
+}
+
+#menu-2 {
+    width: 10%;
+}
+
+#menu-3 {
+    text-align: end;
+    width: 20%;
+}
+
+a {
+    color: #E7E7DB;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span {
+    font-size: 24px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
