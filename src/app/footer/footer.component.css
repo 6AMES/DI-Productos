@@ -13,6 +13,10 @@ footer {
     width: 25%;
 }
 
+#news-sales > div {
+    width: 50%;
+}
+
 #subscribe {
     display: flex;
     flex-direction: column;
@@ -24,6 +28,18 @@ footer {
     display: flex;
     justify-content: flex-end;
     width: 25%;
+}
+
+.title, .button {
+    position: absolute;
+}
+
+.title {
+    transform: translateY(55px);
+}
+
+.button {
+    transform: translateY(270px);
 }
 
 button {
@@ -41,4 +57,15 @@ button:hover {
 
 h2 {
     text-align: center;
+    font-size: 36px;
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

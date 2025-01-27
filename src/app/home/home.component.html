@@ -148,4 +148,9 @@
             </a>
         </div>
     </section>
+
+    <div *ngFor="let producto of productos">
+        <h2>{{ producto.nombre }}</h2>
+        <a [routerLink]="['/producto', producto.id]">Ver detalles</a>
+    </div>
 </main>
