@@ -2,8 +2,4 @@
     <h1>{{ producto.nombre }}</h1>
     <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
     <p>{{ producto.descripcion }}</p>
-  </div>
-  
-  <div *ngIf="!producto">
-    <p>Producto no encontrado.</p>
 </div>

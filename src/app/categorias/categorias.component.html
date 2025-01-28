@@ -1,0 +1,10 @@
+<h1>Productos de {{ categoria }}</h1>
+<ul>
+  <li *ngFor="let producto of productos">
+    <a [routerLink]="['/producto', producto.id]">
+      <h3>{{ producto.nombre }}</h3>
+      <img src={{producto.imagen}} alt="">
+      <span>{{ producto.precio }}</span>
+    </a>
+  </li>
+</ul>
