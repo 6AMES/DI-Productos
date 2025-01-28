@@ -5,6 +5,16 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductoServiceService {  
+  private banners = {
+    'SLEEPING': '../assets/images/sleepingbanner.webp',
+    'COOKING': '../assets/images/cookingbanner.webp',
+    'LIGHTS': '../assets/images/lightsbanner.webp',
+    'STORAGE': '../assets/images/storagebanner.webp',
+    'TENTS': '../assets/images/tentsbanner.webp',
+    'APPAREL': '../assets/images/apparelbanner.webp',
+    'FURNITURE': '../assets/images/furniturebanner.webp'
+  };
+
   private productos = [
     { id: 1, nombre: 'Sleeping Bag & Mat Plus', categoria: 'SLEEPING', descripcion: 'The Sleeping Bag & Mat Plus is a hybrid sleeping bag with an attached sleep mat and retains warmth in temperatures as low as 37.4F. Use the sleeping bag for your outdoor excursions from Spring to Fall. The sleeping bag features a modular dual zipper to separate the top and bottom of the sleeping bag, internal pocket, and attached mat. Pair the Sleeping Bag & Mat Plus with the Stretch Pillow for a full sleeping set-up.', precio: 269.95, imagen: '../assets/images/sleeping1.webp' },
     { id: 2, nombre: 'SS Single', categoria: 'SLEEPING', descripcion: 'The SS Single is a Japanese-designed sleeping bag. Use it for outdoor excursions in the spring and summer. The SS Single is an ultra-soft, cushioned sleeping bag that can be used separately or combined with another to accommodate family camping. The unit can be used as a cushion when packed in the accompanying storage case and features an inner pocket for storing phones or other valuables. Pair the SS Single with the High Tension Cot for comfortable outdoor sleeping.', precio: 64.95, imagen: '../assets/images/sleeping2.webp' },

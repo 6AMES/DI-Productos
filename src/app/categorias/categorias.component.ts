@@ -16,14 +16,16 @@ export class CategoriasComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private ProductoServiceService: ProductoServiceService
+    private ProductoService: ProductoServiceService
   ) {}
 
   ngOnInit(): void {
     this.categoria = this.route.snapshot.paramMap.get('categoria')!;
 
-    this.ProductoServiceService.getProductosPorCategoria(this.categoria).subscribe((data) => {
-      this.productos = data;
-    });
+    this.ProductoService.getProductosPorCategoria(this.categoria);
+  }
+
+  getBannerForCategory(categoria: string): string {
+    return this.ProductoService.getBannerForCategory(categoria);
   }
 }
