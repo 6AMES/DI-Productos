@@ -1,5 +1,13 @@
-<div *ngIf="producto">
-    <h1>{{ producto.nombre }}</h1>
-    <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
-    <p>{{ producto.descripcion }}</p>
+<div class="product-container" *ngIf="producto">
+    <div class="product-image">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
+    </div>
+    <div class="info">
+        <h1>{{ producto.nombre }}</h1>
+        <p class="product-description">{{ producto.descripcion }}</p>
+        <div>
+            <span class="price">{{ producto.precio }}</span>
+            <button>Añadir a la cesta</button>
+        </div>
+    </div>
 </div>

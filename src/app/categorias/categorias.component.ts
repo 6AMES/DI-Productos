@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductoServiceService } from '../producto-service.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Categoria } from '../producto-service.service';
 
 @Component({
   selector: 'app-categorias',
@@ -11,21 +12,23 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 })
 
 export class CategoriasComponent {
+  categoria: Categoria = 'SLEEPING';
+  banner: string = '';
   productos: any[] = [];
-  categoria: string = '';
 
   constructor(
     private route: ActivatedRoute,
-    private ProductoService: ProductoServiceService
+    private productoService: ProductoServiceService
   ) {}
 
   ngOnInit(): void {
-    this.categoria = this.route.snapshot.paramMap.get('categoria')!;
+    const categoriaParam = this.route.snapshot.paramMap.get('categoria') as Categoria;
+    this.categoria = categoriaParam;
 
-    this.ProductoService.getProductosPorCategoria(this.categoria);
-  }
+    this.banner = this.productoService.getBanner(this.categoria);
 
-  getBannerForCategory(categoria: string): string {
-    return this.ProductoService.getBannerForCategory(categoria);
+    this.productoService.getProductosPorCategoria(this.categoria).subscribe((data) => {
+      this.productos = data;
+    });
   }
 }

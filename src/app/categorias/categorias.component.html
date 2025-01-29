@@ -1,18 +1,22 @@
 <section class="container">
-  <div class="section-title overimg">
-      <h1>{{ categoria }}<br>PRODUCTS</h1>
-  </div>
-  <div class="img-cont">
-    <img [src]="getBannerForCategory(categoria)" alt="">
-  </div>
+    <div class="section-title overimg">
+        <h1>{{ categoria }}<br>PRODUCTS</h1>
+    </div>
+    <div class="img-cont">
+        <img [src]="banner" alt="">
+    </div>
 </section>
 
 <ul>
     <li *ngFor="let producto of productos">
         <a [routerLink]="['/producto', producto.id]">
-            <h3>{{ producto.nombre }}</h3>
-            <img src={{producto.imagen}} alt="">
-            <span>{{ producto.precio }}</span>
+            <div class="img-cont-2">
+                <img src={{producto.imagen}} alt="">
+            </div>
+            <div>
+                <h3>{{ producto.nombre }}</h3>
+                <span>{{ producto.precio }}</span>
+            </div>
         </a>
     </li>
 </ul>
