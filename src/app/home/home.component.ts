@@ -18,7 +18,6 @@ export class HomeComponent {
   ngOnInit(): void {
     this.productoService.getCategorias().subscribe((data) => {
       this.categorias = data;
-      console.log('Categorías:', this.categorias);
     });
   }
 
